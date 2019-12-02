@@ -119,7 +119,8 @@ def Analyse_All_Fl_Data(make_plots, compute_integrals):
     try:
         #DATA_HOME = "C:/Users/Robert/Research/CAPPA/Data/EEM_fluorescence/";
         #DATA_HOME = "C:/Users/Robert/Research/CAPPA/Data/EEM_fluorescence/3_Collection/";
-        DATA_HOME = "C:/Users/Robert/Research/CAPPA/Data/EEM_fluorescence/3_Collection/2_Test_high_and_medium_gain/";
+        #DATA_HOME = "C:/Users/Robert/Research/CAPPA/Data/EEM_fluorescence/3_Collection/2_Test_high_and_medium_gain/";
+        DATA_HOME = "C:/Users/Robert/Research/CAPPA/Data/EEM_fluorescence/4_Collection/";
 
         if os.path.isdir(DATA_HOME):
             os.chdir(DATA_HOME)
@@ -131,7 +132,6 @@ def Analyse_All_Fl_Data(make_plots, compute_integrals):
             #MCfile = 'Result(18.28.27_05.06.2019)_2.txt' # this is the file to be read
             #MCfile = 'Result(18.28.27_05.06.2019)_3.txt' # this is the file to be read
             #MCfile = 'Result(18.28.27_05.06.2019)_4.txt' # this is the file to be read
-
             
             #MCfile = 'Result(17.03.12_10.06.2019)_5.txt' # this is the file to be read
 
@@ -139,15 +139,18 @@ def Analyse_All_Fl_Data(make_plots, compute_integrals):
             #MCfile = 'UCD_3Collection_2nd_set_EXC_200-450.txt' # this is the file to be read
             #MCfile = 'UCD_3Collection_3nd_set_EXC_200-450.txt' # this is the file to be read
             #MCfile = 'UCD_3Collection_EXC_200-450.txt' # this is the file to be read
-            MCfile = 'UCD_3Collection_EXC_200-450_medium_gain.txt' # this is the file to be read
+            #MCfile = 'UCD_3Collection_EXC_200-450_medium_gain.txt' # this is the file to be read
+            
+            # New Data 11 - 11 - 2019
+            MCfile = 'UCD_4_Collection.txt' # this is the file to be read
 
             the_data = Read_Fl_File(MCfile) # read the data into memory
 
             fl_preamble, fl_locs = Parse_Fl_File(the_data, False) # Parse the file for information
 
             # Extract the DIW data set to be extracted from each data set
-            #di_sample_name = 'DI_water'; 
-            di_sample_name = 'DI_Water'; 
+            di_sample_name = 'DI_water'; 
+            #di_sample_name = 'DI_Water'; 
             di_Data_set = Extract_Fl_Data(di_sample_name, the_data, fl_preamble, fl_locs)
 
             # lists of integration ranges in the form [lambda_em, lambda_ex]
