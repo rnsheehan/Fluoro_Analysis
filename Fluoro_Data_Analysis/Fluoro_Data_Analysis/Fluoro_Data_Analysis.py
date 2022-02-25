@@ -20,6 +20,6 @@ if __name__ == '__main__':
 
     print(pwd)
 
-    Fluoro_Data_Mangling.Analyse_All_Fl_Data(False, True)
+    #Fluoro_Data_Mangling.Analyse_All_Fl_Data(False, True)
 
-    #Fluoro_Data_Mangling.Analyse_Fl_Data()
+    Fluoro_Data_Mangling.Analyse_Fl_Data(False)

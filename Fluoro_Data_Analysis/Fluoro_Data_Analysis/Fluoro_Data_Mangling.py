@@ -38,7 +38,7 @@ def Analyse_Fl_Data(perform_analysis = True):
     try:
         #DATA_HOME = "C:/Users/Robert/Research/CAPPA/Data/EEM_fluorescence/";
         #DATA_HOME = "C:/Users/Robert/Research/CAPPA/Data/EEM_fluorescence/3_Collection/";
-        DATA_HOME = "C:/Users/Robert/Research/CAPPA/Data/EEM_fluorescence/3_Collection/2_Test_high_and_medium_gain/";
+        DATA_HOME = "C:/Users/robertsheehan/Research/CAPPA/Data/EEM_fluorescence/3_Collection/2_Test_high_and_medium_gain/";
         
         if os.path.isdir(DATA_HOME):
             os.chdir(DATA_HOME)
@@ -61,7 +61,7 @@ def Analyse_Fl_Data(perform_analysis = True):
 
             the_data = Read_Fl_File(MCfile) # read the data into memory
 
-            fl_preamble, fl_locs = Parse_Fl_File(the_data, False) # Parse the file for information
+            fl_preamble, fl_locs = Parse_Fl_File(the_data, True) # Parse the file for information
 
             if perform_analysis:
                 #sample_name = 'Tap_water'; #sample_name = 'Ground_H20'; #sample_name = 'Inside_Puddle'; #sample_name = 'Puddle_Mud'
